@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Product Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="#">Arata</a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" onclick="scrollToSection('#home', event)">Home</a></li>
+                <li><a href="#about" onclick="scrollToSection('#about', event)">About us</a></li>
+                <li><a href="#bestseller" onclick="scrollToSection('#bestseller', event)">Bestseller</a></li>
+                <li><a href="#product" onclick="scrollToSection('#product', event)">Product</a></li>
+                <li><a href="#contact" onclick="scrollToSection('#contact', event)">Contact</a></li>
+                <li><i class="fas fa-shopping-cart" style="font-size: 3rem; cursor: pointer;" onclick="toggleCartPanel()"></i></li>
+            </ul>
+        </nav>
+        <div class="fas fa-bars" ></div>
+    </header>
+
+    <section id="home" class="home">
+        <div class="content">
+            <div class="image-container">
+                <img class="image1" src="Images/image1.jpg" />
+            </div>
+            <div class="text-container">
+                <h1 class="animated-text">Discover Our Best Hair Products</h1>
+                <p class="animated-text">Enhance your hair with our top-quality products designed for all hair types. Feel the difference with our exclusive range.</p>
+                <p class="animated-text">Our products are formulated with natural ingredients that nourish your hair from root to tip. Whether you have curly, straight, wavy, or coily hair, we have something just for you.</p>
+                <p class="animated-text">Our shampoos and conditioners are sulfate-free, ensuring a gentle cleanse without stripping your hair of its natural oils. The styling products provide a lasting hold while keeping your hair soft and manageable.</p>
+                <p class="animated-text">Join thousands of satisfied customers who have transformed their hair with our products. Experience the ultimate in hair care and get ready to love your hair again!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>We are committed to providing the highest quality hair products that cater to all hair types. Our mission is to help you achieve beautiful, healthy hair through our innovative and effective hair care solutions.</p>
+                <p>Founded with a passion for hair care, our team of experts continuously researches and develops new formulas that meet the needs of our diverse customer base. We believe that everyone deserves to feel confident and look their best, which is why we strive to create products that deliver real results.</p>
+                <p>Join us on our journey to revolutionize hair care. Discover the difference with our range of products that are designed to nourish, protect, and enhance your hair.</p>
+            </div>
+            <div class="about-image">
+                <img src="Images/about.jpg" alt="About Us" class="about-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="bestseller" id="bestseller">
+        <div class="best-content">
+            <div class="best-text">
+                BestSellers
+            </div>
+            <div class="best-card">
+                <div class="card">
+                    <h3>Product 1</h3>
+                    <img src="Images/product1.webp" alt="Product 1" class="card-image">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac suscipit felis.</p>
+                    <button class="addBtn" onclick="addToCart('product1')">Add</button>
+                </div>
+                <div class="card">
+                    <h3>Product 2</h3>
+                    <img src="Images/product2.webp" alt="Product 2" class="card-image">
+                    <p>Nullam vitae justo eu justo placerat aliquet. Ut rutrum interdum tellus.</p>
+                    <button class="addBtn" onclick="addToCart('product2')">Add</button>
+                </div>
+                <div class="card">
+                    <h3>Product 3</h3>
+                    <img src="Images/product3.webp" alt="Product 3" class="card-image">
+                    <p>Vivamus auctor nisl a arcu fermentum, id posuere ipsum fermentum.</p>
+                    <button class="addBtn" onclick="addToCart('product3')">Add</button>
+                </div>
+                <div class="cart-popup" id="cartPopup">
+                    <div class="cart-header">
+                        <h3>Shopping Cart</h3>
+                        <button class="close-btn"  onclick="closePanel()">&times;</button>
+                    </div>
+                    <ul class="cart-items">
+                       
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        
+        <div class="contact-container">
+            <div class="contact-details">
+
+                <h3>CONTACT</h3>
+                <p><strong>ADDRESS</strong></p>
+                <p>500 Terry Francine Street<br>San Francisco, CA 94158</p>
+    
+                <p><strong>CONTACT US</strong></p>
+                <p>123-456-7890<br>info@mysite.com</p>
+    
+                <p><strong>OPENING HOURS</strong></p>
+                <p>Mon - Fri :<br>10am - 7pm</p>
+                <p>Sat - Sun :<br>11am - 4pm</p>
+                
+            </div>
+            <div class="contact-form-container">
+                <form action="#" method="POST" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div>@2024</div>
+
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">shampoos</a></li>
+                        <li><a href="#">conditioners</a></li>
+                        <li><a href="#">hair oils</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+ 
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
